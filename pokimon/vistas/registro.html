@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - POKIMON</title>
+    <script>
+        function Registrar() {
+            let username = document.getElementById('newUsername').value;
+            let password = document.getElementById('newPassword').value;
+            let email = document.getElementById('email').value;
+            
+            if(username === '' || password === '' || email === '') {
+                alert('Por favor, completa todos los campos.');
+                return;
+            }
+            
+            alert('Registro exitoso para: ' + username);
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>REGÍSTRATE EN POKIMON</h1>
+        <p>Completa el formulario para crear tu cuenta</p>
+    </center>
+    <hr>
+    <br>
+    <center>
+        <label for="newUsername">Username</label>
+        <input type="text" id="newUsername">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email">
+        <br>
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword">
+        <br>
+        <button onclick="Registrar()">Registrarse</button>
+    </center>
+</body>
+</html>

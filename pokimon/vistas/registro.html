@@ -1,42 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - POKIMON</title>
-    <script>
-        function Registrar() {
-            let username = document.getElementById('newUsername').value;
-            let password = document.getElementById('newPassword').value;
-            let email = document.getElementById('email').value;
-            
-            if(username === '' || password === '' || email === '') {
-                alert('Por favor, completa todos los campos.');
-                return;
-            }
-            
-            alert('Registro exitoso para: ' + username);
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrarse</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://i.pinimg.com/736x/9a/32/fb/9a32fbfa36da2665cf96e7430e7bcb16.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    .form-wrapper {
+      margin-left: 5%;
+    }
+
+    h1, p {
+      text-shadow: 2px 2px 4px #000;
+      margin: 5px 0;
+    }
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 25px;
+      border-radius: 20px; /* cuadrado con bordes suavizados */
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    }
+
+    .form-container p {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .form-container label {
+      display: block;
+      margin-top: 10px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background-color: #ffcc00;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #ffaa00;
+    }
+  </style>
+  <script src="../js/registrar.js"></script>
 </head>
 <body>
-    <center>
-        <h1>REGÍSTRATE EN POKIMON</h1>
-        <p>Completa el formulario para crear tu cuenta</p>
-    </center>
-    <hr>
-    <br>
-    <center>
-        <label for="newUsername">Username</label>
-        <input type="text" id="newUsername">
-        <br>
-        <label for="email">Email</label>
-        <input type="email" id="email">
-        <br>
-        <label for="newPassword">Password</label>
-        <input type="password" id="newPassword">
-        <br>
-        <button onclick="Registrar()">Registrarse</button>
-    </center>
+  <div class="form-wrapper">
+    <h1>BIENVENIDO AL MUNDO POKIMON</h1>
+    <p>Bienvenido a mi primer juego en JavaScript</p>
+
+    <div class="form-container">
+      <p>Registro</p>
+
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre">
+
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido">
+
+      <label for="email">Email</label>
+      <input type="email" id="email">
+
+      <label for="contrasena">Contraseña</label>
+      <input type="password" id="contrasena">
+
+      <button onclick="Registrar()">Registrar</button>
+    </div>
+  </div>
 </body>
 </html>

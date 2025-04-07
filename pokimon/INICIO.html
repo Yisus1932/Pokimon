@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POKIMON</title>
+    <title>Inicio de sesión</title>
     <style>
 
         body {
@@ -17,12 +17,10 @@
             justify-content: center;
             align-items: center;
             color: white;
-            font-family: Arial, sans-serif;
         }
 
-        
-        .content-container {
-            background-color: rgb(255, 0, 0);
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 10px;
             width: 300px;
@@ -30,35 +28,15 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        /* Estilo para los enlaces */
-        a {
-            display: block;
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
             padding: 10px;
             margin: 10px 0;
-            background-color: #ffcc00;
-            color: black;
-            text-decoration: none;
             border-radius: 5px;
-            font-size: 18px;
-            text-transform: uppercase;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
         }
 
-        
-        a:hover {
-            background-color: #ff9900;
-        }
-
-        
         button {
             width: 100%;
             padding: 10px;
@@ -71,19 +49,18 @@
         }
 
         button:hover {
-            background-color: #ff9900; /* Cambia el color cuando pasas el mouse */
+            background-color: #ff9900;
         }
     </style>
 </head>
 <body>
-    <div class="content-container">
-        <h1>BIENVENIDO AL MUNDO POKIMON</h1>
-        <p>Bienvenido a mi primer juego en javascript</p>
-
-        <div>
-            <a href="./vistas/login.html">Iniciar</a>
-            <a href="./vistas/registro.html">Registrarse</a>
-        </div>
+    <div class="form-container">
+        <h2>Iniciar sesión</h2>
+        <form>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
     </div>
 </body>
 </html>

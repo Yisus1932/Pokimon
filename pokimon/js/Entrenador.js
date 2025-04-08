@@ -1,6 +1,3 @@
-
-
-
 function GetDataUser(){
     let dataUser = localStorage.getItem("user")
     

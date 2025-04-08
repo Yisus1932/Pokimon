@@ -32,7 +32,7 @@
     .form-container {
       background-color: rgba(0, 0, 0, 0.75);
       padding: 25px;
-      border-radius: 20px; /* cuadrado con bordes suavizados */
+      border-radius: 20px;
       width: 300px;
       text-align: center;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
@@ -80,7 +80,34 @@
       background-color: #ffaa00;
     }
   </style>
-  <script src="../js/registrar.js"></script>
+
+  <script>
+    function Registrar() {
+      const nombre = document.getElementById('nombre').value.trim();
+      const apellido = document.getElementById('apellido').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const contrasena = document.getElementById('contrasena').value;
+
+      if (!nombre || !apellido || !email || !contrasena) {
+        alert("Por favor completa todos los campos.");
+        return;
+      }
+
+      // Crear un objeto de usuario
+      const usuario = {
+        nombre: nombre,
+        apellido: apellido,
+        email: email,
+        contrasena: contrasena
+      };
+
+      // Guardar el objeto usuario en localStorage
+      localStorage.setItem("user", JSON.stringify(usuario));
+
+      alert("Usuario registrado correctamente. Serás redirigido al login.");
+      window.location.href = "login.html"; // Asumiendo que login.html está en la misma carpeta
+    }
+  </script>
 </head>
 <body>
   <div class="form-wrapper">

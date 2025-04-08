@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selecciona tu Género</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 400px; /* Establece un alto fijo */
+      object-fit: contain; /* Evita deformaciones */
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-content h2 {
+      margin: 0 0 10px;
+    }
+    .card-content button {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .card-content button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Tarjeta Masculino -->
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/espokemon/images/8/80/Lucho_NB_%28Ilustraci%C3%B3n%29.png/revision/latest?cb=20140225232213" alt="Personaje Masculino">
+      <div class="card-content">
+        <h2>Masculino</h2>
+        <button onclick="seleccionarGenero('masculino')">Escoger</button>
+      </div>
+    </div>
+
+    <!-- Tarjeta Femenino -->
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/pokestorys/images/6/6b/Alexandra_artwork.png/revision/latest/smart/width/250/height/250?cb=20120709180148&path-prefix=es" alt="Personaje Femenino">
+      <div class="card-content">
+        <h2>Femenino</h2>
+        <button onclick="seleccionarGenero('femenino')">Escoger</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function seleccionarGenero(genero) {
+      window.location.href = `historia.html?genero=${genero}`;
+    }
+  </script>
+
+</body>
+</html>

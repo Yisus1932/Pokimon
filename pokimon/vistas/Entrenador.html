@@ -1,13 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="../js/Entrenador.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrenador Pokémon</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://external-preview.redd.it/-JJFO0hoxNrPrKWvCQo1mMnrPzmQuC9KOf1xp2qx6T4.jpg?auto=webp&s=7e3dbc237fbdd2fdd09652f3f65b18db686b27d6');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 20px;
+      margin: 15px 0 5px;
+    }
+
+    input, select {
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 15px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #00cc66;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00994d;
+    }
+  </style>
 </head>
 <body>
-    
-    
+
+  <div class="container">
+    <h1>¡Bienvenido entrenador!</h1>
+    <p>Antes de comenzar tu aventura, cuéntanos un poco sobre ti.</p>
+
+    <label for="nombre">¿Cómo te llamas?</label>
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+
+    <label for="pokemon">¿Cuál será tu primer Pokimon?</label>
+    <select id="pokemon">
+      <option value="Pikachu">Pikachu</option>
+      <option value="Charmander">Charmander</option>
+      <option value="Squirtle">Squirtle</option>
+      <option value="Bulbasaur">Bulbasaur</option>
+    </select>
+
+    <button onclick="iniciarBatalla()">Continuar</button>
+  </div>
+
+  <script>
+    function iniciarBatalla() {
+      const nombre = document.getElementById('nombre').value.trim();
+      const pokemon = document.getElementById('pokemon').value;
+
+      if (nombre === '') {
+        alert('Por favor, ingresa tu nombre de entrenador.');
+        return;
+      }
+
+      // Puedes guardar esto en localStorage si lo necesitas más adelante
+      localStorage.setItem('entrenador', nombre);
+      localStorage.setItem('pokemon', pokemon);
+
+      window.location.href = 'batalla.html';
+    }
+  </script>
+
 </body>
 </html>

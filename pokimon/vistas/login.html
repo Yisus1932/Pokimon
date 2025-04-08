@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>POKIMON</title>
-  <script src="../js/index.js"></script>
   <style>
     body {
       background-image: url('https://i.blogs.es/a02312/pikachu/1366_2000.jpeg');
@@ -18,7 +17,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      padding-left: 2%; /* Aquí el cambio */
+      padding-left: 2%;
     }
 
     .login-circle {
@@ -110,7 +109,27 @@
 
     <button class="pokeball-button" onclick="Loguear()">Iniciar sesión</button>
   </div>
+
+  <script>
+    function Loguear() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('clave').value;
+
+      const user = JSON.parse(localStorage.getItem("user"));
+
+      if (!user) {
+        alert("No tienes una cuenta registrada, por favor regístrate.");
+        return;
+      }
+
+      if (user.username === username && user.password === password) {
+        alert("¡Bienvenido entrenador!");
+        window.location.href = `genero.html?login=${login}`
+        
+      } else {
+        alert("Usuario o contraseña incorrectos.");
+      }
+    }
+  </script>
 </body>
 </html>
-
-

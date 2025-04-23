@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Combate Pokémon</title>
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e5f6ff;
+      margin: 0;
+      padding: 30px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .entrenador {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.4em;
+      margin-bottom: 20px;
+    }
+    .entrenador img {
+      width: 30px;
+    }
+    .titulo {
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-size: 1.2em;
+    }
+    .pokemon-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .pokemon {
+      flex: 1;
+      max-width: 300px;
+      border: 2px solid #ccc;
+      border-radius: 15px;
+      padding: 10px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+    .pokemon-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      justify-content: center;
+    }
+    .pokemon-header img {
+      width: 40px;
+      height: 40px;
+    }
+    .atributo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-size: 0.95em;
+    }
+    .atributo img {
+      width: 18px;
+      height: 18px;
+    }
+    .btn-escoger, .btn-Informacion {
+      margin: 8px 5px 0 5px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn-escoger:hover, .btn-Informacion:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="entrenador">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User">
+      <span>Jesus</span>
+    </div>
+
+    <div class="titulo">3 Pokemones</div>
+
+    <div class="pokemon-row">
+
+      <!-- Pikachu -->
+      <div class="pokemon">
+        <div class="pokemon-header">
+          <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png" alt="Pikachu">
+          <img src="https://cdn-icons-png.flaticon.com/512/188/188987.png" alt="Pokebola">
+          <strong>Pikachu</strong>
+        </div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/685/685352.png"><span>Ataque: 55</span></div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/831/831682.png"><span>Defensa: 40</span></div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/2909/2909753.png"><span>Tipo: Eléctrico</span></div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/287/287221.png"><span>Habilidad: Electricidad Estática</span></div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/709/709496.png"><span>Evolución: Raichu</span></div>
+        <button class="btn-escoger" onclick="window.location.href='Pelea.html'">Escoger</button>
+        <button class="btn-Informacion" onclick="window.location.href='InformacionP.html'">Información</button>
+      </div>
+
+      <!-- Charizard -->
+      <div class="pokemon">
+        <div class="pokemon-header">
+          <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png" alt="Charizard">
+          <img src="https://cdn-icons-png.flaticon.com/512/188/188987.png" alt="Pokebola">
+          <strong>Charizard</strong>
+        </div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/685/685352.png"><span>Ataque: 84</span></div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/831/831682.png"><span>Defensa: 78</span></div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/2909/2909753.png"><span>Tipo: Fuego / Volador</span></div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/287/287221.png"><span>Habilidad: Mar Llamas</span></div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/709/709496.png"><span>Evolución: -</span></div>
+        <button class="btn-escoger" onclick="window.location.href='Pelea.html'">Escoger</button>
+        <button class="btn-Informacion" onclick="window.location.href='InformacionC.html'">Información</button>
+      </div>
+
+      <!-- Mewtwo -->
+      <div class="pokemon">
+        <div class="pokemon-header">
+          <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/150.png" alt="Mewtwo">
+          <img src="https://cdn-icons-png.flaticon.com/512/188/188987.png" alt="Pokebola">
+          <strong>Mewtwo</strong>
+        </div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/685/685352.png"><span>Ataque: 110</span></div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/831/831682.png"><span>Defensa: 90</span></div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/2909/2909753.png"><span>Tipo: Psíquico</span></div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/287/287221.png"><span>Habilidad: Presión</span></div>
+        <div class="atributo"><img src="https://cdn-icons-png.flaticon.com/512/709/709496.png"><span>Evolución: No tiene</span></div>
+        <button class="btn-escoger" onclick="window.location.href='Pelea.html'">Escoger</button>
+        <button class="btn-Informacion" onclick="window.location.href='InformacionM.html'">Información</button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

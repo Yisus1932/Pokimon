@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mewtwo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://static.nationalgeographic.es/files/styles/image_3200/public/01-hubble-heic1301a.webp?w=1600&h=900');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      width: 350px;
+      text-align: center;
+    }
+
+    .card h1 {
+      margin: 0;
+      margin-bottom: 15px;
+      color: #d6baff;
+    }
+
+    .card img {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .info span {
+      font-weight: bold;
+      color: #a3e4ff;
+    }
+
+    .volver-btn {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #8e44ad;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .volver-btn:hover {
+      background-color: #732d91;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Mewtwo</h1>
+    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/150.png" alt="Mewtwo">
+    <div class="info">
+      <p><span>Tipo:</span> Psíquico</p>
+      <p><span>Ataque:</span> 110</p>
+      <p><span>Defensa:</span> 90</p>
+      <p><span>Habilidad:</span> Presión</p>
+      <p><span>Evolución:</span> No tiene</p>
+      <p><span>Descripción:</span> Pokémon legendario creado por científicos, es muy fuerte y tiene poderes mentales muy grandes.</p>
+    </div>
+    <button class="volver-btn" onclick="window.history.back()">Volver</button>
+  </div>
+
+</body>
+</html>

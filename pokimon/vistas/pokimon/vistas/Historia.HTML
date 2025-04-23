@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia Pokimon</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://i.pinimg.com/736x/c0/fd/d9/c0fdd964f3300ac766a9111acc52f8b0.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      text-shadow: 1px 1px 4px black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #ffcc00;
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 20px;
+      max-width: 800px;
+      line-height: 1.6;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .botones {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .boton {
+      background-color: #ffcc00;
+      color: black;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .boton:hover {
+      background-color: #ffaa00;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenido al Mundo Pokimon</h1>
+  <h2 id="saludo"></h2>
+  <p>
+    En un mundo donde humanos y criaturas misteriosas llamadas Pokimon. Esta comienza desde la era de Arceus el creador de todo lo que habita en nuestro mundo,
+    pricipalmente empezo creando un mundo adecuado para habitar y seguido de eso empezo con algunas de sus creaciones las cuales habitarian ese mundo con lo que creo los primeros Pokimons.
+     Con este pequeño contexto te damos la bienvenida a un mundo donde tendras que explorar y conocer a los Pokimons que habitan este mundo. Tendras qeu batallar contra otros pokimon para ganar y asi poder avanzar en el mundo.
+  </p>
+
+  <div class="botones">
+    <button class="boton" onclick="window.location.href='Entrenador.html'">Volver a Selección</button>
+    <button class="boton" onclick="window.location.href='Personaliza.html'">Ir a Personalizar</button>
+  </div>
+
+</body>
+</html>

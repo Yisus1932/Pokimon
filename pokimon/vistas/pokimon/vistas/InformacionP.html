@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Información de Pikachu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://wallpapers.com/images/hd/pokemon-pikachu-yellow-background-63tvn3lch2mq4pw6.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .card h1 {
+      margin-top: 0;
+      color: #ffea00;
+    }
+
+    .card img {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      text-align: left;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .info span {
+      font-weight: bold;
+      color: #a3e4ff;
+    }
+
+    .volver-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ffcc00;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .volver-btn:hover {
+      background-color: #e6b800;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Pikachu</h1>
+    <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/025.png" alt="Pikachu">
+    <div class="info">
+      <p><span>Tipo:</span> Eléctrico</p>
+      <p><span>Ataque:</span> 55</p>
+      <p><span>Defensa:</span> 40</p>
+      <p><span>Habilidad:</span> Electricidad estática</p>
+      <p><span>Evolución:</span> Raichu</p>
+      <p><span>Descripción:</span> Pikachu lanza rayos eléctricos cuando se enfada. Es muy leal a su entrenador y uno de los más conocidos del mundo pokimón.</p>
+    </div>
+    <button class="volver-btn" onclick="window.history.back()">Volver</button>
+  </div>
+
+</body>
+</html>

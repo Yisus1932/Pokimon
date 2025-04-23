@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pelea Pokémon</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #d2f0ff;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .info {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3e8e41;
+    }
+    #resultado {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Batalla Pokémon: Mewtwo vs Pikachu</h1>
+
+  <div class="info"> Mewtwo → Ataque: 110 | Defensa: 90 | Vida: 100</div>
+  <div class="info"> Pikachu → Ataque: 55 | Defensa: 40 | Vida: 100</div>
+
+  <button onclick="pelear()">Pelea</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function pelear() {
+      const mewtwo = { ataque: 110, defensa: 90, vida: 100 };
+      const pikachu = { ataque: 55, defensa: 40, vida: 100 };
+
+      const dañoMewtwo = Math.max(0, mewtwo.ataque - pikachu.defensa);
+      const dañoPikachu = Math.max(0, pikachu.ataque - mewtwo.defensa);
+
+      const vidaPikachu = pikachu.vida - dañoMewtwo;
+      const vidaMewtwo = mewtwo.vida - dañoPikachu;
+
+      let resultado = `
+        Mewtwo le hizo ${dañoMewtwo} de daño a Pikachu.<br>
+        Pikachu le hizo ${dañoPikachu} de daño a Mewtwo.<br><br>
+      `;
+
+      if (vidaMewtwo > vidaPikachu) {
+        resultado += " Mewtwo gana";
+      } else if (vidaPikachu > vidaMewtwo) {
+        resultado += " Pikachu gana";
+      } else {
+        resultado += " Empate";
+      }
+
+      document.getElementById("resultado").innerHTML = resultado;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charmillion</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://media.istockphoto.com/id/113494458/es/foto/fuego-aislada-sobre-fondo-negro.jpg?s=612x612&w=0&k=20&c=0yQuvwg8pArC8QpuzUN9UlRYLX6t0lo0zQ0H1osHCY8=');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 20px;
+      border-radius: 10px;
+      width: 350px;
+      text-align: center;
+    }
+
+    .card h1 {
+      margin: 0;
+      margin-bottom: 15px;
+      color: #ff4d4d;
+    }
+
+    .card img {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .info span {
+      font-weight: bold;
+      color: #a3e4ff;
+    }
+
+    .volver-btn {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #bc2222;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .volver-btn:hover {
+      background-color: #a51b1b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Charmillion</h1>
+    <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png" alt="Charmillion">
+    <div class="info">
+      <p><span>Tipo:</span> Fuego/Volador</p>
+      <p><span>Ataque:</span> 84</p>
+      <p><span>Defensa:</span> 78</p>
+      <p><span>Habilidad:</span> Mar de llamas</p>
+      <p><span>Evolución:</span> Crecer</p>
+      <p><span>Descripción:</span> Es un pokimon que solo habita zonas rocosas o volcanicas, de los pokimones mas buscado por los principiante ya que viene con un poder destructor masivo y una capacidad de crecimiento incomparable</p>
+    </div>
+    <button class="volver-btn" onclick="window.history.back()">Volver</button>
+  </div>
+
+</body>
+</html>

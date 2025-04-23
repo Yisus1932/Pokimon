@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Entrenador</title>
+  <script src="../js/Entrenador.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://i.gifer.com/2iiJ.gif');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .contenedor {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 700px;
+    }
+
+    fieldset {
+      border: 2px solid yellow;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    legend {
+      color: yellow;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: yellow;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <fieldset>
+      <legend>Entrenador</legend>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Pokimons</legend>
+      <label for="nombrePokemon">Nombre del Pokimon:</label>
+      <input type="text" id="nombrePokemon" required>
+
+      <label for="tipo">Tipo:</label>
+      <input type="text" id="tipo" required>
+
+      <label for="ataque">Ataque:</label>
+      <input type="text" id="ataque" required>
+
+      <label for="defensa">Defensa:</label>
+      <input type="text" id="defensa" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Opciones</legend>
+      <button onclick="window.location.href='Pelea.html'">Combatir</button>
+      <button onclick="window.location.href='Combate.html'">Ver Pokimons</button>
+    </fieldset>
+  </div>
+</body>
+</html>
